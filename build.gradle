@@ -1,0 +1,28 @@
+plugins {
+    id 'org.springframework.boot' version '2.7.5'
+    id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+    id 'java'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'io.javaoperatorsdk:operator-framework-spring-boot-starter:3.0.3'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    // To automatically generate CRD manifests from your annotated Custom Resource classes
+    annotationProcessor 'io.fabric8:crd-generator-apt:5.12.2'
+}
+
+
+
+tasks.named('test') {
+    useJUnitPlatform()
+}

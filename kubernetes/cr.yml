@@ -1,0 +1,7 @@
+apiVersion: "11st.example.com/v1"
+kind: ElevenStApp
+metadata:
+  name: elevenst-service
+spec:
+  appId: elevenst-service
+  owner: core-platform-team

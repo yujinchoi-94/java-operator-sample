@@ -1,0 +1,13 @@
+package com.example.javaoperatorsample;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class JavaOperatorSampleApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(JavaOperatorSampleApplication.class, args);
+    }
+
+}
