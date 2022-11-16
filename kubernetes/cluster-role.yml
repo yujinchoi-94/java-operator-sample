@@ -1,0 +1,11 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: cr-elevenst-service
+rules:
+  - apiGroups: ["11st.example.com"]
+    resources: ["*"]
+    verbs: [ "*" ]
+  - apiGroups: [ "apps" ]
+    resources: [ "deployments" ]
+    verbs: [ "*" ]
