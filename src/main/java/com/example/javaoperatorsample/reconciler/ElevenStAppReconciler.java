@@ -1,7 +1,6 @@
 package com.example.javaoperatorsample.reconciler;
 
 import java.util.Map;
-import java.util.Optional;
 
 import com.example.javaoperatorsample.cr.ElevenStApp;
 import com.example.javaoperatorsample.cr.ElevenStAppStatus;
@@ -22,12 +21,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 @ControllerConfiguration
-public class ExposedAppReconciler implements Reconciler<ElevenStApp>{
+public class ElevenStAppReconciler implements Reconciler<ElevenStApp>{
 
-    private static final Logger logger = LoggerFactory.getLogger(ExposedAppReconciler.class);
+    private static final Logger logger = LoggerFactory.getLogger(ElevenStAppReconciler.class);
     private final KubernetesClient kubernetesClient;
 
-    public ExposedAppReconciler(KubernetesClient kubernetesClient) {
+    public ElevenStAppReconciler(KubernetesClient kubernetesClient) {
         this.kubernetesClient = kubernetesClient;
     }
 

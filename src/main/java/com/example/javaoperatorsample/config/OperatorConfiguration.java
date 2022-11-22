@@ -2,7 +2,7 @@ package com.example.javaoperatorsample.config;
 
 import java.util.List;
 
-import com.example.javaoperatorsample.reconciler.ExposedAppReconciler;
+import com.example.javaoperatorsample.reconciler.ElevenStAppReconciler;
 import io.fabric8.kubernetes.client.DefaultKubernetesClient;
 import io.fabric8.kubernetes.client.KubernetesClient;
 import io.javaoperatorsdk.operator.Operator;
@@ -14,8 +14,8 @@ import org.springframework.context.annotation.Configuration;
 public class OperatorConfiguration {
 
     @Bean
-    public ExposedAppReconciler exposedAppReconciler(KubernetesClient kubernetesClient) {
-        return new ExposedAppReconciler(kubernetesClient);
+    public ElevenStAppReconciler exposedAppReconciler(KubernetesClient kubernetesClient) {
+        return new ElevenStAppReconciler(kubernetesClient);
     }
 
     @Bean(initMethod = "start", destroyMethod = "stop")
